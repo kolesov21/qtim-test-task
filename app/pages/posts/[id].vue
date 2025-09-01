@@ -1,17 +1,19 @@
 <template>
-  <LoaderSpinner v-if="isLoading" />
-  <main v-else-if="post" class="mt-[120px] mb-[80px] gap-20">
-    <h1 class="text-[84px] leading-[100%]">{{ post.title }}</h1>
-    <img
-      src="assets/img/placeholders/image-placeholder-9.webp"
-      :alt="`Image for post #${post.id}`"
-      class="h-auto w-full max-w-[1216px]"
-    />
-    <!-- Ссылки на изображения, которые присылает бэк, некорректные или неактуальные. Использовал из макета -->
-    <div class="flex max-w-[695px] flex-col gap-8">
-      <p class="text-[16px] leading-[100%]">About</p>
-      <p class="text-[36px] leading-[124%]">{{ post.description }}</p>
-    </div>
+  <main class="mt-[120px] mb-[80px] gap-20">
+    <LoaderSpinner v-if="isLoading" />
+    <template v-else-if="post">
+      <h1 class="text-[84px] leading-[100%]">{{ post.title }}</h1>
+      <img
+        src="assets/img/placeholders/image-placeholder-9.webp"
+        :alt="`Image for post #${post.id}`"
+        class="h-auto w-full max-w-[1216px]"
+      />
+      <!-- Ссылки на изображения, которые присылает бэк, некорректные или неактуальные. Использовал из макета -->
+      <div class="flex max-w-[695px] flex-col gap-8">
+        <p class="text-[16px] leading-[100%]">About</p>
+        <p class="text-[36px] leading-[124%]">{{ post.description }}</p>
+      </div>
+    </template>
   </main>
 </template>
 
