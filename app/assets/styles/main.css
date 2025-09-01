@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Ссылка на шрифт указанная в макете - некорректная или неактуальная. Использовал и Google Fonts */
+@import 'tailwindcss';
+
+@theme {
+  --color-*: initial;
+  --color-black: #101010;
+  --color-gray-dark: #232323;
+  --color-gray: #868686;
+  --color-gray-light: #F3F3F3;
+  --color-white: #FFFFFF;
+  --color-mint: #9EFFBF;
+  --color-purple: #7941A7;
+  --color-lavender: #E2BEFF;
+  --color-blue: #1059C8;
+
+  --font-*: initial;
+  --font-primary: 'Poppins', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+body {
+  @apply font-primary text-black;
+
+  .text-regular {
+    @apply text-[16px] leading-[120%] tracking-[1%];
+  }
+}
